@@ -1,0 +1,14 @@
+@startuml
+actor Usuario as usuario
+usecase (Iniciar sesion)as iniciarsesion
+usecase (Denuncias) as  denuncias
+usecase (Consulta Antecedentes) as consultaAntecedentes
+usecase (Certificados) as certificados
+usecase (SeguimientoDenun) as seguimientodenun
+usuario-right->iniciarsesion
+iniciarsesion-up->denuncias
+iniciarsesion-down->consultaAntecedentes
+iniciarsesion-right->certificados
+denuncias-right->seguimientodenun
+@enduml
+
