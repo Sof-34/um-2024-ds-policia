@@ -1,0 +1,36 @@
+@startuml
+class IniciarSesion{
+    string nombreUsuario
+    string contraseña
+    string activo/no
+}
+class Denuncias{
+    string nombre
+    string cedula
+    string correo
+    string fecha
+    string hora
+    string tipoDelito
+    string direccion
+}
+class SeguimientoDenuncias{
+    int numeroDenuncia
+    string estado
+    string fechaSeguimiento
+    string notas
+}
+class Antecedentes{
+    string nombre
+    string edad
+    string tipoAntecedente
+    string activo
+}
+class Certificados{
+    string nombre
+    string cedula
+    string tipoCertificado
+    string fechaSolictud
+}
+IniciarSesion-down-*Denuncias
+Denuncias-right-* Antecedentes
+SeguimientoDenuncias-right-*Denuncias
